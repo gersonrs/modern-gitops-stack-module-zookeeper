@@ -1,5 +1,22 @@
 # Changelog
 
+## [3.0.0](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/compare/v2.0.0...v3.0.0) (2026-11-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* provider major bumps and a stricter Terraform baseline; consumers must run `terraform init -upgrade`.
+
+### 🚀 New Features
+
+* add namespace_labels variable to all modules ([cbf8ab5](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/commit/cbf8ab5cab6e0db878a8527efb46979ae17572d7))
+* upgrade charts, providers and Terraform baseline ([#9](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/issues/9)) ([3b0da2e](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/commit/3b0da2ec4c8bf1e976b3cd0282a08240b36a9e41))
+
+
+### 📦 CI Improvements
+
+* run release-please with GITHUB_TOKEN ([#10](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/issues/10)) ([5279ad4](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/commit/5279ad458fae8e2a282f1a3564a37d12070ebad6))
+
 ## [2.0.0](https://github.com/GersonRS/modern-gitops-stack-module-zookeeper/compare/v1.3.0...v2.0.0) (2025-01-18)
 
 
