@@ -19,9 +19,9 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- [[provider_utils]] <<provider_utils,utils>> (~> 2.7)
-
 - [[provider_argocd]] <<provider_argocd,argocd>> (~> 7.18)
+
+- [[provider_utils]] <<provider_utils,utils>> (~> 2.7)
 
 - [[provider_null]] <<provider_null,null>> (~> 3.3)
 
