@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/compare/v3.0.0...v3.0.1) (2026-11-21)
+
+
+### 🔥 Bug Fixes
+
+* run the bitnamilegacy zookeeper image ([#12](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/issues/12)) ([744534c](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/commit/744534c37653e9e109a973be79a945de423f9b9b))
+
 ## [3.0.0](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/compare/v2.0.0...v3.0.0) (2026-11-20)
 
 
