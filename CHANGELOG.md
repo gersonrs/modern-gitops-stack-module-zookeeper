@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.2](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/compare/v3.0.1...v3.0.2) (2026-11-24)
+
+
+### 📚 Documentation
+
+* add usage and dependencies to the module documentation ([#14](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/issues/14)) ([946f640](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/commit/946f640bb46569f4efd432a636742f51dd05739e))
+
 ## [3.0.1](https://github.com/gersonrs/modern-gitops-stack-module-zookeeper/compare/v3.0.0...v3.0.1) (2026-11-21)
 
 
