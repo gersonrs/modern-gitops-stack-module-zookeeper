@@ -1,4 +1,48 @@
 = modern-gitops-stack-module-zookeeper
+// Document attributes to replace along the document
+:zookeeper-chart-version: 13.8.7
+:original-repo-url: https://github.com/bitnami/charts
+
+A https://modern-gitops-stack.io[Modern GitOps Stack] module to deploy Apache ZooKeeper, the coordination service required by Kafka and NiFi.
+
+The zookeeper chart used by this module is shipped in this repository as well, in order to avoid any unwanted behaviors caused by unsupported versions.
+
+[cols="1,1,1",options="autowidth,header"]
+|===
+|Current Chart Version |Original Repository |Default Values
+|*13.8.7* |https://github.com/bitnami/charts/tree/main/bitnami/zookeeper[zookeeper] |https://artifacthub.io/packages/helm/zookeeper/zookeeper/13.8.7?modal=values[`values.yaml`]
+|===
+
+== Usage
+
+This module can be declared by adding the following block to your Terraform configuration:
+
+[source,terraform]
+----
+module "zookeeper" {
+  source = "git::https://github.com/GersonRS/modern-gitops-stack-module-zookeeper.git?ref=<RELEASE>"
+
+  cluster_name   = local.cluster_name
+  base_domain    = local.base_domain
+  subdomain      = local.subdomain
+  cluster_issuer = local.cluster_issuer
+  app_autosync   = local.app_autosync
+
+  dependency_ids = {
+    istio = module.istio.id
+  }
+}
+----
+
+The application is deployed to the `ingestion` namespace.
+
+== Technical Reference
+
+=== Dependencies
+
+==== `module.istio.id`
+
+ZooKeeper runs inside the mesh.
 
 // BEGIN_TF_DOCS
 === Requirements
@@ -93,7 +137,7 @@ Description: Override of target revision of the application chart.
 
 Type: `string`
 
-Default: `"v3.0.0"`
+Default: `"v3.0.1"`
 
 ==== [[input_cluster_issuer]] <<input_cluster_issuer,cluster_issuer>>
 
@@ -197,9 +241,9 @@ Description: ID to pass other modules in order to refer to this module as a depe
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Version
-|[[provider_null]] <<provider_null,null>> |~> 3.3
-|[[provider_argocd]] <<provider_argocd,argocd>> |~> 7.18
 |[[provider_utils]] <<provider_utils,utils>> |~> 2.7
+|[[provider_argocd]] <<provider_argocd,argocd>> |~> 7.18
+|[[provider_null]] <<provider_null,null>> |~> 3.3
 |===
 
 = Resources
@@ -258,7 +302,7 @@ Description: ID to pass other modules in order to refer to this module as a depe
 |[[input_target_revision]] <<input_target_revision,target_revision>>
 |Override of target revision of the application chart.
 |`string`
-|`"v3.0.0"`
+|`"v3.0.1"`
 |no
 
 |[[input_cluster_issuer]] <<input_cluster_issuer,cluster_issuer>>
